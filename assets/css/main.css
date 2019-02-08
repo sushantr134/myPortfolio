@@ -5,6 +5,7 @@
           box-sizing: border-box;
   font-family: 'Ropa Sans', sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
 
 @-webkit-keyframes UP_DOWN {
@@ -165,6 +166,7 @@ header nav ul li:hover {
 header nav ul li a {
   color: inherit;
   text-decoration: none;
+  font-family: inherit;
 }
 
 @media screen and (max-width: 800px) {
@@ -418,12 +420,19 @@ header nav ul li a {
         -ms-flex-align: center;
             align-items: center;
     position: absolute;
-    right: 1em;
+    right: 3em;
     width: 100%;
   }
   #main .__Down .__Button {
     position: relative;
     bottom: 2em;
   }
+}
+
+/*Education */
+#Education {
+  background: black;
+  width: 100%;
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
