@@ -1,0 +1,337 @@
+*,*::after,*::before
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ropa Sans', sans-serif;
+    color:white;
+}
+
+@keyframes UP_DOWN
+{
+    0%{
+        margin-bottom: 0%;
+    }
+    100%{
+      margin-bottom: 20%;
+    }
+}
+
+@keyframes GLOW
+{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes RtoL
+{
+   from{
+       transform: translateX(120%);
+   }
+   to{
+    transform: translateX(0%);
+   }
+}
+
+@keyframes LtoR
+{
+   from{
+       transform: translateX(-120%);
+   }
+   to{
+    transform: translateX(0%);
+   }
+}
+
+body
+{
+    animation:GLOW 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s 1;
+}
+header
+{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 100;
+    nav
+    {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        background: transparent;
+        padding: 2em;
+        .Logo
+        {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1
+            {
+                text-transform: capitalize;
+                font-size: 2rem;
+                font-family: 'Major Mono Display', monospace;
+                text-align: center;
+
+            }
+        }
+        ul
+        {
+           display: flex;
+           justify-content: flex-end;
+           align-items: center;
+           list-style: none;
+           li
+           {
+               margin-right: 1em;
+               font-size:1.3rem;
+               padding: 0.3em;
+               cursor: pointer;
+               box-sizing: border-box;
+               border-radius: 0.2em;
+               letter-spacing: 0.8px;
+               opacity: 1;
+               font-family: 'Pacifico', cursive;
+               &:hover
+               {
+                   background: #e71991d0;
+                   color: white;
+                   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.43s;
+                   
+               }
+               &
+               {
+                   a
+                   {
+                       color:inherit;
+                       text-decoration: none;
+                   }
+               }
+           }
+        }
+    }
+    @media screen and (max-width:800px){
+
+        nav
+        {
+           display: grid;
+           grid-template-columns: none !important;
+           ul
+           {
+               display: flex;
+               flex-direction: column;
+               transform: scale(1,0);
+           }
+        }
+
+    }
+}
+
+#main
+{
+    background: url(/assets/images/bg.jpeg) no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    .container
+    {
+        width: 100%;
+        height: inherit;
+        background-image: linear-gradient(-180deg,rgba(7, 64, 252,0.78),rgb(62, 36, 117),rgba(252, 0, 105, 0.7));
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        position: relative;
+        overflow-y: auto;
+
+        .__Left
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation:LtoR 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s 1;
+            .ProfilePhoto
+            {
+                width: 250px;
+                box-sizing: border-box;
+                height:250px;
+                background: url(/assets/images/icon.jpg) no-repeat;
+                background-position-y: -8px;
+                background-size: cover;
+                border-radius: 100%;
+                box-shadow:0px 0px 20px 3px white;
+            }
+        }
+        .__Right
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            border-left: 0.1em dotted white;
+            overflow: hidden;
+            animation:RtoL 1.5s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s 1;
+            .AboutTagline
+            {
+                padding: 3em;
+                #hello
+                {
+                    font-family: 'Roboto', sans-serif;
+                }
+                p
+                {
+                    text-align: left;
+                    font-size: 5.4vmax;
+                    text-transform: capitalize;
+                    font-family: 'Pacifico', cursive;
+                }
+                
+                .__smallTag
+                {
+                    font-size: 0.88rem;
+                    margin-top:0.3em;
+                    text-align: left;
+                    padding: 0.5em;
+                    letter-spacing: 0.55px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .__HireButton
+            {
+                background: transparent;
+                border:0.2em solid white;
+                padding: 0.8em;
+                width: 10em;
+                margin-left: 3em;
+                margin-bottom: 3em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                cursor: pointer;
+                label
+                {
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                    color: white;
+
+                    a
+                    {
+                        color:inherit;
+                        text-decoration: none;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+
+                &:hover
+                {
+                    background:linear-gradient(120deg,#0428ca,#f730a4);
+                }
+
+            }
+        }
+     
+
+        @media screen and (max-width:800px){
+            &
+            {
+                display: grid;
+                grid-template-columns: none;
+                position: absolute;
+                padding-top:6em;
+                .__Left
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .ProfilePhoto
+                    {
+                        width:240px;
+                        height: 240px;
+                    }
+                }
+                .__Right
+                {
+                    border: none;
+                    .AboutTagline
+                    {
+                        padding: 2em;
+                    }
+                    .__HireButton
+                    {
+                        margin-left: 2em;
+                    }
+                }
+            }
+        }
+    }
+
+    .__Down
+    {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        .__Button
+        {
+            
+            position: absolute;
+            bottom: 2em;
+            width: 50px;
+            border-radius: 100%;
+            height: 50px;
+            background: rgba($color: #000000, $alpha: 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span
+            {
+                width: 15px;
+                height: 15px;
+                border-top:0.3em solid white;
+                border-right: 0.3em solid white;
+                transform: rotate(135deg);
+                border-radius: 0.2em;
+                cursor: pointer;
+                animation: UP_DOWN 0.89s cubic-bezier(1, 0, 0, 1) infinite;
+            }
+
+
+        }
+    }
+
+    @media screen and (max-width:800px) {
+        &
+        {
+          .__Down
+          {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              position: absolute;
+              right:1em;
+              width: 100%;
+
+              .__Button
+              {
+                  position: relative;
+                  bottom: 2em;
+
+              }
+          }
+        }
+    }
+}
