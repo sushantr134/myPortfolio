@@ -188,7 +188,7 @@ header nav ul li a {
 }
 
 #main {
-  background: url(/assets/images/bg.jpeg) no-repeat fixed;
+  background: url(./assets/images/bg.jpeg) no-repeat fixed;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -235,7 +235,7 @@ header nav ul li a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 250px;
-  background: url(/assets/images/icon.jpg) no-repeat;
+  background: url(./assets/images/icon.jpg) no-repeat;
   background-position-y: -8px;
   background-size: cover;
   border-radius: 100%;
