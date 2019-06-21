@@ -1,9 +1,11 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Ropa Sans', sans-serif;
+  font-family: "Ropa Sans", sans-serif;
   color: white;
   scroll-behavior: smooth;
 }
@@ -126,7 +128,7 @@ header nav .Logo {
 header nav .Logo h1 {
   text-transform: capitalize;
   font-size: 2rem;
-  font-family: 'Major Mono Display', monospace;
+  font-family: "Major Mono Display", monospace;
   text-align: center;
 }
 
@@ -159,7 +161,7 @@ header nav ul li {
   border-radius: 0.2em;
   letter-spacing: 0.8px;
   opacity: 1;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 header nav ul li:hover {
@@ -276,14 +278,14 @@ header nav ul li a {
 }
 
 #main .container .__Right .AboutTagline #hello {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #main .container .__Right .AboutTagline p {
   text-align: left;
   font-size: 5.4vmax;
   text-transform: capitalize;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 #main .container .__Right .AboutTagline .__smallTag {
@@ -295,13 +297,28 @@ header nav ul li a {
   text-transform: uppercase;
 }
 
-#main .container .__Right .__HireButton {
+#main .container .__Right .buttonContainer {
+  width: 100vw;
+  max-width: 30em;
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .container .__Right .buttonContainer .__HireButton,
+#main .container .__Right .buttonContainer .__CVButton {
   background: transparent;
   border: 0.2em solid white;
   padding: 0.8em;
-  width: 10em;
-  margin-left: 3em;
-  margin-bottom: 3em;
+  width: 11em;
+  margin-left: 0em;
+  margin-bottom: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +332,8 @@ header nav ul li a {
   cursor: pointer;
 }
 
-#main .container .__Right .__HireButton label {
+#main .container .__Right .buttonContainer .__HireButton label,
+#main .container .__Right .buttonContainer .__CVButton label {
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
@@ -323,13 +341,15 @@ header nav ul li a {
   color: white;
 }
 
-#main .container .__Right .__HireButton label a {
+#main .container .__Right .buttonContainer .__HireButton label a,
+#main .container .__Right .buttonContainer .__CVButton label a {
   color: inherit;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-#main .container .__Right .__HireButton:hover {
+#main .container .__Right .buttonContainer .__HireButton:hover,
+#main .container .__Right .buttonContainer .__CVButton:hover {
   background: linear-gradient(120deg, #0428ca, #f730a4);
 }
 
