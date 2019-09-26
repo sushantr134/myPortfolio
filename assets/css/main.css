@@ -329,23 +329,14 @@ header nav ul li a {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  text-decoration: none;
   cursor: pointer;
-}
-
-#main .container .__Right .buttonContainer .__HireButton label,
-#main .container .__Right .buttonContainer .__CVButton label {
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem;
   letter-spacing: 1px;
   color: white;
-}
-
-#main .container .__Right .buttonContainer .__HireButton label a,
-#main .container .__Right .buttonContainer .__CVButton label a {
-  color: inherit;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
 }
 
 #main .container .__Right .buttonContainer .__HireButton:hover,

@@ -204,20 +204,14 @@ header {
           justify-content: center;
           align-items: center;
           color: white;
+          text-decoration: none;
           cursor: pointer;
-          label {
-            text-transform: uppercase;
-            text-align: center;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            color: white;
-
-            a {
-              color: inherit;
-              text-decoration: none;
-              font-family: "Roboto", sans-serif;
-            }
-          }
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 1rem;
+          letter-spacing: 1px;
+          color: white;
+          text-decoration: none;
 
           &:hover {
             background: linear-gradient(120deg, #0428ca, #f730a4);
